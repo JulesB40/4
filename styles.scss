@@ -1,0 +1,68 @@
+$title-color : white;
+$primary-color : red;
+$lh-h1 : 72px;
+$lh-h2 : 25px;
+
+@mixin border-radius($radius){
+    border-radius: $radius;
+}
+
+@mixin pl-px($pixel){
+    padding-left: $pixel;
+}
+
+%flex{display:flex}
+
+header {
+    color: $primary-color;
+    & > div {
+        @extend %flex ;
+        & .ul {
+            @extend %flex;
+            list-style: none;
+        }
+        & .img {
+            @include border-radius(50%)
+        }
+        & h1 {
+            font-size: $lh-h1+30;
+            &:hover {
+                color:aqua
+            }
+        }
+    }
+}
+
+@for $i from 1 through 3 {
+    ul:nth-child(3n + #{$i}){
+        color:$title-color
+    }
+}
+
+body {
+    & p {
+        color: $primary-color;
+    }
+}
+
+a {
+    & img {
+        @include border-radius(50%);
+        width : 100%
+    }
+}
+
+img {
+    @include border-radius(35%);
+    @include pl-px(30)
+}
+
+.diag {
+    & img {
+        transform: rotateX('45');
+    }
+}
+
+.center {
+    text-align: center;
+}

@@ -1,0 +1,53 @@
+header > div .ul, header > div {
+  display: flex;
+}
+
+header {
+  color: red;
+}
+header > div .ul {
+  list-style: none;
+}
+header > div .img {
+  border-radius: 50%;
+}
+header > div h1 {
+  font-size: 102px;
+}
+header > div h1:hover {
+  color: aqua;
+}
+
+ul:nth-child(3n+1) {
+  color: white;
+}
+
+ul:nth-child(3n+2) {
+  color: white;
+}
+
+ul:nth-child(3n+3) {
+  color: white;
+}
+
+body p {
+  color: red;
+}
+
+a img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+img {
+  border-radius: 35%;
+  padding-left: 30;
+}
+
+.diag img {
+  transform: rotateX("45");
+}
+
+.center {
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
